@@ -1,0 +1,11 @@
+version: '3'
+services:
+  laravelapp:
+    build: .
+    volumes:
+      - ./laravel:/var/www/html/
+    ports:
+      - 9000:80
+
+  redis:
+    image: redis:3.2.0
