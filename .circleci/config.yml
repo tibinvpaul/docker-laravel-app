@@ -12,6 +12,6 @@ jobs:
           command: |
             apt-get update
             apt-get install -y docker-compose==1.15.0
-      -run:
+      - run:
           name: Run docker compose
           command: docker-compose up -d
