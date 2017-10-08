@@ -8,6 +8,10 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Print name
+          name: Install docker compose
           command: |
-            echo 'Tibin Paul'
+            apt-get update
+            apt-get install -y docker-compose==1.15.0
+      -run:
+          name: Run docker compose
+          command: docker-compose up -d
