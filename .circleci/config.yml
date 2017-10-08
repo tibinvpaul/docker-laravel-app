@@ -8,6 +8,6 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-        name: Print name
-        command: |
-          echo 'Tibin Paul'
+          name: Print name
+          command: |
+            echo 'Tibin Paul'
