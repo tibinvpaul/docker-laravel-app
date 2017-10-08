@@ -1,6 +1,13 @@
 version: 2
 jobs:
   build:
-    working_directory: /dockerapp
+    working_directory: /docker-laravel-app
     docker:
       - image: docker:17.05.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+        name: Print name
+        command: |
+          echo 'Tibin Paul'
